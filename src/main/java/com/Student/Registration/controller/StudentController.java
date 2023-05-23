@@ -4,7 +4,6 @@ import com.Student.Registration.entity.Student;
 import com.Student.Registration.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -32,6 +31,7 @@ public class StudentController {
     }
 
     @DeleteMapping("/delete/{id}")
+
     public Student deleteStudent(@PathVariable Long id){
         Student student = studentService.findById(id);
         studentService.delete(student);
